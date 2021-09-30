@@ -12,6 +12,12 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Survey Data')
 
-headings = SHEET.worksheet[sheet1].get_all_values()[0]
+# headings = SHEET.worksheet('sheet1').get_all_values()[0]
 
-print(headings)
+# print(headings)
+
+sales = SHEET.worksheet('Sheet1')
+
+data = sales.get_all_values()
+
+print(data)
