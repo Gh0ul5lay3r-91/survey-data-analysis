@@ -12,6 +12,21 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Survey Data')
 
+def validate_option(selected_option):
+    """
+    Function validates the option the user entered is 
+    one of the options suggested
+    """
+    try:
+        if int(selected_option) <= 4:
+            raise ValueError(
+                f"Option {selected_option} invalid, please select a valid option."
+            )
+    except ValueError as e:
+        print(f"Invalid character, {e}")
+    
+    return selected_option
+
 def main():
     """
     Main function that calls all other funtions based on option entered by user
