@@ -18,7 +18,7 @@ def validate_option(selected_option):
     one of the options suggested
     """
     try:
-        if int(selected_option) <= 4:
+        if selected_option > 4:
             raise ValueError(
                 f"Option {selected_option} invalid, please select a valid option."
             )
@@ -27,28 +27,41 @@ def validate_option(selected_option):
     
     return selected_option
 
+def get_average_age():
+    print("This function works 1")
+
+def get_perc_male():
+    print("This function works 2")
+
+def get_perc_female():
+    print("This function works 3")
+
+def get_average_salary():
+    print("This function works 4")
+
 def main():
     """
     Main function that calls all other funtions based on option entered by user
     """
-    print("Please select the option you'd like displayed\n")
-    print("Option 1:")
-    print("Option 2:")
-    print("Option 3:")
-    print("Option 4:")
-    user_option = input("Enter option here: \n")
-    option = validate_option(user_option)
+    while True:
+        print("Please select the option you'd like displayed\n")
+        print("Option 1:")
+        print("Option 2:")
+        print("Option 3:")
+        print("Option 4:")
+        user_option = int(input("Enter option here: \n"))
+        option = validate_option(user_option)
     
-    if option == 1:
-        get_average_age()
-    elif option == 2:
-        get_perc_male()
-    elif option == 3:
-        get_perc_female()
-    elif option == 4:
-        get_survey_data()
-    else:
-        print("Please pick a valid option\n")
+        if option == 1:
+            get_average_age()
+        elif option == 2:
+            get_perc_male()
+        elif option == 3:
+            get_perc_female()
+        elif option == 4:
+            get_average_salary()
+        else:
+            print("Please pick a valid option\n")
 
 
 print("Welcome to the Survey Analysis App\n")
