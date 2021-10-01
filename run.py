@@ -28,7 +28,21 @@ def validate_option(selected_option):
     return selected_option
 
 def get_average_age():
-    print("This function works 1")
+    """
+    Function gets the average age of all the persons inouted into google sheet
+    """
+    #This piece was found after some research on StackOverflow
+    #https://stackoverflow.com/questions/36235559/how-to-use-python-to-read-one-column-from-excel-file
+    ages = []
+    for value in SHEET.worksheet("Sheet1").col_values(2):
+        ages.append(value)
+    
+    ages.pop(0)
+
+    total_age = sum([int(age) for age in ages])
+    average = total_age / len(ages)
+    round(average)
+    print(average)
 
 def get_perc_male():
     print("This function works 2")
@@ -53,7 +67,7 @@ def main():
         option = validate_option(user_option)
     
         if option == 1:
-            get_average_age()
+            average_age = get_average_age()
         elif option == 2:
             get_perc_male()
         elif option == 3:
