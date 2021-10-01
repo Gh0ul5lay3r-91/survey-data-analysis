@@ -41,8 +41,8 @@ def get_average_age():
 
     total_age = sum([int(age) for age in ages])
     average = total_age / len(ages)
-    round(average)
-    print(average)
+    
+    return average
 
 def get_perc_male():
     print("This function works 2")
