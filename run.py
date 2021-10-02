@@ -12,6 +12,27 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Survey Data')
 
+#Both this function adn the next where inspired buy the Love Sandwiches validation system
+def get_option():
+    """
+    Function asks user for their option 1-4, then checks to see if it is valid, 
+    returns option to main
+    """
+    while True:
+        print("Please select the option you'd like displayed\n")
+        print("Option 1:")
+        print("Option 2:")
+        print("Option 3:")
+        print("Option 4:")
+        user_option = int(input("Enter option here: \n"))
+
+        if validate_option(user_option):
+            print(f"Option is valid, you selected option {user_option} \n")
+            break
+    
+    return user_option
+
+
 def validate_option(selected_option):
     """
     Function validates the option the user entered is 
@@ -24,8 +45,9 @@ def validate_option(selected_option):
             )
     except ValueError as e:
         print(f"Invalid character, {e}")
+        return False
     
-    return selected_option
+    return True
 
 def get_average_age():
     """
@@ -57,26 +79,16 @@ def main():
     """
     Main function that calls all other funtions based on option entered by user
     """
-    while True:
-        print("Please select the option you'd like displayed\n")
-        print("Option 1:")
-        print("Option 2:")
-        print("Option 3:")
-        print("Option 4:")
-        user_option = int(input("Enter option here: \n"))
-        option = validate_option(user_option)
-    
-        if option == 1:
-            average_age = get_average_age()
-        elif option == 2:
-            get_perc_male()
-        elif option == 3:
-            get_perc_female()
-        elif option == 4:
-            get_average_salary()
-        else:
-            print("Please pick a valid option\n")
-
+    option = get_option()
+    if option == 1:
+        average_age = get_average_age()
+        print(average_age)
+    elif option == 2:
+        get_perc_male()
+    elif option == 3:
+        get_perc_female()
+    elif option == 4:
+        get_average_salary()
 
 print("Welcome to the Survey Analysis App\n")
 main()
