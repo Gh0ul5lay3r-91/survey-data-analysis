@@ -67,7 +67,19 @@ def get_average_age():
     return average
 
 def get_perc_male():
-    print("This function works 2")
+    """
+    Function gets the gender column and checks to see if male, adds to a list, then calculates the percentage
+    """
+    males = []
+    genders = SHEET.worksheet("Sheet1").col_values(3)
+    genders.pop(0)
+    
+    for value in SHEET.worksheet("Sheet1").col_values(3):
+        if value == "M":
+            males.append(value)
+    
+    average_age_male = len(males) / len(genders) * 100
+    print(average_age_male)
 
 def get_perc_female():
     print("This function works 3")
