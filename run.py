@@ -89,6 +89,9 @@ def main():
         get_perc_female()
     elif option == 4:
         get_average_salary()
+    else:
+        return False
 
-print("Welcome to the Survey Analysis App\n")
-main()
+while True:
+    print("Welcome to the Survey Analysis App\n")
+    main()
