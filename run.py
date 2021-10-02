@@ -97,7 +97,20 @@ def get_perc_female():
     return average_age_female
 
 def get_average_salary():
-    print("This function works 4")
+    """
+    This function gets and calculates the total sum of all the salaries,
+    Then calculates the average and returns it to main
+    """
+    salarys = []
+    for value in SHEET.worksheet("Sheet1").col_values(5):
+        salarys.append(value)
+    
+    
+    salarys.pop(0)
+    print(salarys)
+
+    total_salary = sum([int(salary) for salary in salarys.split(",")])
+    print(total_salary)
 
 def main():
     """
