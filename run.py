@@ -1,3 +1,4 @@
+#Importing gspread API and credentials to be able to open and read from the google sheet
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -18,17 +19,17 @@ def get_option():
     Function asks user for their option 1-4, then checks to see if it is valid, 
     returns option to main
     """
-    while True:
-        print("Please select the option you'd like displayed\n")
-        print("Option 1:")
-        print("Option 2:")
-        print("Option 3:")
-        print("Option 4:")
-        user_option = int(input("Enter option here: \n"))
+    
+    
+    print("Please select the option you'd like displayed\n")
+    print("Option 1:")
+    print("Option 2:")
+    print("Option 3:")
+    print("Option 4:")
+    user_option = int(input("Enter option here: \n"))
 
-        if validate_option(user_option):
-            print(f"Option is valid, you selected option {user_option} \n")
-            break
+    if validate_option(user_option):
+        print(f"Option is valid, you selected option {user_option} \n")
     
     return user_option
 
@@ -45,9 +46,6 @@ def validate_option(selected_option):
             )
     except ValueError as e:
         print(f"Invalid character, {e}")
-        return False
-    
-    return True
 
 def get_average_age():
     """
@@ -105,9 +103,8 @@ def get_average_salary():
     for value in SHEET.worksheet("Sheet1").col_values(5):
         worksheet_salarys.append(value)
     
-    
     worksheet_salarys.pop(0)
-    print(worksheet_salarys)
+    
     salarys = []
     for salary in worksheet_salarys:
         salarys.append(salary.replace(",",""))
