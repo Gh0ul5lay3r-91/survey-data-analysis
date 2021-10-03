@@ -101,16 +101,17 @@ def get_average_salary():
     This function gets and calculates the total sum of all the salaries,
     Then calculates the average and returns it to main
     """
-    salarys = []
+    worksheet_salarys = []
     for value in SHEET.worksheet("Sheet1").col_values(5):
-        salarys.append(value)
+        worksheet_salarys.append(value)
     
     
-    salarys.pop(0)
+    worksheet_salarys.pop(0)
+    print(worksheet_salarys)
+    salarys = []
+    for salary in worksheet_salarys:
+        salarys.append(salary.replace(",",""))
     print(salarys)
-
-    total_salary = sum([int(salary) for salary in salarys.split(",")])
-    print(total_salary)
 
 def main():
     """
