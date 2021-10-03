@@ -27,7 +27,8 @@ def get_option():
     print("Option 4: Average Salary")
     user_option = int(input("Enter option here: \n"))
 
-    #This if calls the function to check the option the user entered is correct, option is passed to the function
+    #This if calls the function to check the option the user 
+    # entered is correct, option is passed to the function
     #If the function returns as true, then it prints the line below
     if validate_option(user_option):
         print(f"Option is valid, your selected option {user_option} \n")
