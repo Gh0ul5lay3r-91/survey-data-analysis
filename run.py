@@ -19,8 +19,7 @@ def get_option():
     Function asks user for their option 1-4, then checks to see if it is valid, 
     returns option to main
     """
-    
-    
+    #These prints, print the options to the user, then asks for the input
     print("Please select the option you'd like displayed\n")
     print("Option 1:")
     print("Option 2:")
@@ -28,8 +27,10 @@ def get_option():
     print("Option 4:")
     user_option = int(input("Enter option here: \n"))
 
+    #This if calls the function to check the option the user entered is correct, option is passed to the function
+    #If the function returns as true, then it prints the line below
     if validate_option(user_option):
-        print(f"Option is valid, you selected option {user_option} \n")
+        print(f"Option is valid, your selected option {user_option} \n")
     
     return user_option
 
@@ -39,6 +40,7 @@ def validate_option(selected_option):
     Function validates the option the user entered is 
     one of the options suggested
     """
+    #Code below error handles the users input, if the input is wrong it prints the lines below
     try:
         if selected_option > 4:
             raise ValueError(
@@ -46,6 +48,8 @@ def validate_option(selected_option):
             )
     except ValueError as e:
         print(f"Invalid character, {e}")
+    
+    return True
 
 def get_average_age():
     """
@@ -53,12 +57,15 @@ def get_average_age():
     """
     #This piece was found after some research on StackOverflow
     #https://stackoverflow.com/questions/36235559/how-to-use-python-to-read-one-column-from-excel-file
+    #Code ads the values of the column into the ages list
     ages = []
     for value in SHEET.worksheet("Sheet1").col_values(2):
         ages.append(value)
     
+    #Removes the first entry of the list as it is the Heading of the column
     ages.pop(0)
 
+    #This code gets the sum of the ages list and puts them into the total_age variable, then calculates the average age.
     total_age = sum([int(age) for age in ages])
     average = total_age / len(ages)
     
