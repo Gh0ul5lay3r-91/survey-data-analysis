@@ -21,10 +21,10 @@ def get_option():
     """
     #These prints, print the options to the user, then asks for the input
     print("Please select the option you'd like displayed\n")
-    print("Option 1:")
-    print("Option 2:")
-    print("Option 3:")
-    print("Option 4:")
+    print("Option 1: Average Age")
+    print("Option 2: Percentage of Males")
+    print("Option 3: Percentage of Females")
+    print("Option 4: Average Salary")
     user_option = int(input("Enter option here: \n"))
 
     #This if calls the function to check the option the user entered is correct, option is passed to the function
@@ -76,13 +76,17 @@ def get_perc_male():
     Function gets the gender column and checks to see if male, adds to a list, then calculates the percentage
     """
     males = []
+    #Gets column of genders from sheet
     genders = SHEET.worksheet("Sheet1").col_values(3)
+    #Removes the heading from the list
     genders.pop(0)
     
+    #Checks the see if the values in the list are M(male), if there are it adds them to the males list
     for value in SHEET.worksheet("Sheet1").col_values(3):
         if value == "M":
             males.append(value)
     
+    #Calculates percentage of males
     average_age_male = len(males) / len(genders) * 100
     return average_age_male
 
@@ -90,6 +94,7 @@ def get_perc_female():
     """
     Function gets the gender column and checks to see if female, adds to a list, then calculates the percentage
     """
+    #Exact copy for previous function code
     females = []
     genders = SHEET.worksheet("Sheet1").col_values(3)
     genders.pop(0)
@@ -106,16 +111,20 @@ def get_average_salary():
     This function gets and calculates the total sum of all the salaries,
     Then calculates the average and returns it to main
     """
+    #Writes column to variable
     worksheet_salarys = []
     for value in SHEET.worksheet("Sheet1").col_values(5):
         worksheet_salarys.append(value)
     
+    #Removes Heading in list
     worksheet_salarys.pop(0)
     
+    #Writes a new list with out the comma in the numbers
     salarys = []
     for salary in worksheet_salarys:
         salarys.append(salary.replace(",",""))
     
+    #Calculates average Salary
     total_salary = sum([int(salary) for salary in salarys])
     average_salary = total_salary / len(salarys)
     
@@ -123,24 +132,25 @@ def get_average_salary():
 
 def main():
     """
-    Main function that calls all other funtions based on option entered by user
+    Main function that calls all other funtions based on option entered by user, then prints result of the function
     """
     option = get_option()
     if option == 1:
         average_age = get_average_age()
-        print(average_age)
+        print(f"The average age of the Survey is {average_age}\n")
     elif option == 2:
         male_percentage = get_perc_male()
-        print(male_percentage)
+        print(f"The percentage of males in the survey is {male_percentage}%\n")
     elif option == 3:
         female_percentage = get_perc_female()
-        print(female_percentage)
+        print(f"The percentage of females in the survey is {female_percentage}%\n")
     elif option == 4:
         average_salary = get_average_salary()
-        print(average_salary)
+        print(f"The average salary of the survey is {average_salary}\n")
     else:
         return False
 
+#While loop keeps the program running to allow the user to select another option
 while True:
     print("Welcome to the Survey Analysis App\n")
     main()
