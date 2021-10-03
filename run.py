@@ -12,7 +12,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Survey Data')
 
-#Both this function adn the next where inspired buy the Love Sandwiches validation system
+# Both this function adn the next where inspired buy the Love Sandwiches validation system
 def get_option():
     """
     Function asks user for their option 1-4, then checks to see if it is valid, 
@@ -132,7 +132,8 @@ def main():
         female_percentage = get_perc_female()
         print(female_percentage)
     elif option == 4:
-        get_average_salary()
+        average_salary = get_average_salary()
+        print(average_salary)
     else:
         return False
 
