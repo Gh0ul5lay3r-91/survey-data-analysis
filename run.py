@@ -111,7 +111,11 @@ def get_average_salary():
     salarys = []
     for salary in worksheet_salarys:
         salarys.append(salary.replace(",",""))
-    print(salarys)
+    
+    total_salary = sum([int(salary) for salary in salarys])
+    average_salary = total_salary / len(salarys)
+    
+    return average_salary
 
 def main():
     """
