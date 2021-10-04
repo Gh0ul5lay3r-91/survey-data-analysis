@@ -14,9 +14,10 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Survey Data')
 
+
 # Both this function adn the next where inspired buy the
 # Love Sandwiches validation system
-def  get_option():
+def get_option():
     """
     Function asks user for their option 1-4, then checks to see if it is
     valid, returns option to main
@@ -38,7 +39,7 @@ def  get_option():
     return user_option
 
 
-def  validate_option(selected_option):
+def validate_option(sel_option):
     """
     Function validates the option the user entered is
     one of the options suggested
@@ -46,16 +47,17 @@ def  validate_option(selected_option):
     # Code below error handles the users input, if the input is wrong
     #  it prints the lines below
     try:
-        if selected_option > 4:
+        if sel_option > 4:
             raise ValueError(
-                f"Option {selected_option} invalid, please select a valid option."
+                f"Option {sel_option} invalid, please select a valid option."
             )
     except ValueError as e:
         print(f"Invalid character, {e}")
 
     return True
 
-def  get_average_age():
+
+def get_average_age():
     """
     Function gets the average age of all the persons inouted into google sheet
     """
@@ -76,7 +78,8 @@ def  get_average_age():
 
     return average
 
-def  get_perc_male():
+
+def get_perc_male():
     """
     Function gets the gender column and checks to see if male, adds to a list
     , then calculates the percentage
@@ -97,6 +100,7 @@ def  get_perc_male():
     average_age_male = len(males) / len(genders) * 100
     return average_age_male
 
+
 def get_perc_female():
     """
     Function gets the gender column and checks to see if female,
@@ -114,7 +118,8 @@ def get_perc_female():
     average_age_female = len(females) / len(genders) * 100
     return average_age_female
 
-def  get_average_salary():
+
+def get_average_salary():
     """
     This function gets and calculates the total sum of all the salaries,
     Then calculates the average and returns it to main
@@ -138,6 +143,7 @@ def  get_average_salary():
 
     return average_salary
 
+
 def main():
     """
     Main function that calls all other funtions based on option
@@ -151,19 +157,18 @@ def main():
         male_percentage = get_perc_male()
         print(f"The percentage of males in the survey is {male_percentage}%\n")
     elif option == 3:
-        female_percentage = get_perc_female()
+        female_perc = get_perc_female()
         print(
-            f"The percentage of females in the survey is
-            {female_percentage} %\n"
-        )
+            f"The percentage of females in the survey is {female_perc}%\n")
     elif option == 4:
         average_salary = get_average_salary()
         print(f"The average salary of the survey is {average_salary}\n")
     else:
         return False
 
+
 # While loop keeps the program running to allow the
 #  user to select another option
-while  True:
+while True:
     print("Welcome to the Survey Analysis App\n")
     main()

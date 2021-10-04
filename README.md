@@ -1,4 +1,4 @@
-### Survey Data Analysis
+# Survey Data Analysis
 
 
 ## Introduction
@@ -17,3 +17,16 @@ Opportunities where listed out to decided what features to build
 | Average Salary                       | 3          | 3                     |
 | Percentage of M,F                    | 4          | 4                     | 
 | Average Age                          | 4          | 4                     |
+
+With this table done it was decided that the features to include would be
+* Options List
+* Average age
+* Percentage of Males
+* Percentage of Females
+* Average Salary
+In that order. 
+## Features
+### Options List
+### Average Age
+### Percentage of Male and Female
+### Average Salary
