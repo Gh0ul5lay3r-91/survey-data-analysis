@@ -48,6 +48,8 @@ The options list is provide to allow the user to select which way they would lik
 * Average Salary
 The app will ask the user to input their option then check to see if its valid and matches the list of options.
 
+![Options List]()
+
 ### Average Age
 ### Percentage of Male and Female
 ### Average Salary
