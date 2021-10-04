@@ -140,7 +140,8 @@ def  get_average_salary():
 
 def main():
     """
-    Main function that calls all other funtions based on option entered by user, then prints result of the function
+    Main function that calls all other funtions based on option
+    entered by user, then prints result of the function
     """
     option = get_option()
     if option == 1:
@@ -151,7 +152,10 @@ def main():
         print(f"The percentage of males in the survey is {male_percentage}%\n")
     elif option == 3:
         female_percentage = get_perc_female()
-        print(f"The percentage of females in the survey is {female_percentage}%\n")
+        print(
+            f"The percentage of females in the survey is
+            {female_percentage} %\n"
+        )
     elif option == 4:
         average_salary = get_average_salary()
         print(f"The average salary of the survey is {average_salary}\n")
