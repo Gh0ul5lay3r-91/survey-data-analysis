@@ -1,3 +1,5 @@
+![Main Image](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Header%20Image.png)
+
 # Survey Data Analysis
 
 
@@ -48,8 +50,9 @@ The options list is provide to allow the user to select which way they would lik
 * Average Salary
 The app will ask the user to input their option then check to see if its valid and matches the list of options.
 
-![Options List]()
+![Options List](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Options%20List.png)
 
 ### Average Age
+
 ### Percentage of Male and Female
 ### Average Salary
