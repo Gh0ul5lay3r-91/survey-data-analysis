@@ -83,3 +83,23 @@ I used the PEP8 website to check the code. Initially there where many warnings i
 
 ![PEP8](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/PEP8.png)
 
+## Deployment
+To deploy this project I used Heroku, I followed the walk through videos to set all my settings and deploy the app.
+
+To deploy I went through the following steps
+* Set up my account on Heroku.
+* Ensured requirements.txt was correct.
+* Added the correct config vars.
+* Added the correct build packs.
+* Ensured automatic deployment was turned on.
+* Deployed.
+
+Live link can be found here - https://survey-data-analysis.herokuapp.com/
+
+## Credits
+During the build I only came across one issue and that was getting the data from one column rather than a row, I did some research and found a solution on StackOverflow.
+[Here](https://stackoverflow.com/questions/36235559/how-to-use-python-to-read-one-column-from-excel-file)
+Another credit goes to the love sandwiches app with the data input validation. I used a similar method. 
+Credit again goes to tutoring for helping me with an issue at the start of the project where i didnt capitalize the name in sheet which caused the program not to be able to find the sheet.
+
+Over all look and feel came from the love sandwiches walk though, as this was only a data manipulation app i felt I didnt need to break too much from that layout. 
