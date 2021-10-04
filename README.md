@@ -24,8 +24,22 @@ With this table done it was decided that the features to include would be
 * Percentage of Males
 * Percentage of Females
 * Average Salary
-In that order. 
+
+The order you see is the order of precedence, the other features can be considered for later implementation. Work then began on user stories and flow charts.
+
+User stories consisted of me placing myself in the shoes of a user who wanted to get some insight into statistical data of a survey.
+* User
+    * As a user, I want to be able to choose between options for data to be displayed to me.
+    * As a user, I want to be able to know the average age of all entries.
+    * As a user, I want to be able to know the percentages of Males and Females in the survey.
+    * As a user, I want to be able to know what the average salary of the entries is.
+
+Flow charts where drawn up to aid with decision of how the app would function
+* 
+
 ## Features
+The Survey Data Analysis app has a few features to help the user both navigate the app, and be able to read the data coming from the survey.
+
 ### Options List
 ### Average Age
 ### Percentage of Male and Female
