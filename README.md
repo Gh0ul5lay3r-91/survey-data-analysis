@@ -102,4 +102,4 @@ During the build I only came across one issue and that was getting the data from
 Another credit goes to the love sandwiches app with the data input validation. I used a similar method. 
 Credit again goes to tutoring for helping me with an issue at the start of the project where i didnt capitalize the name in sheet which caused the program not to be able to find the sheet.
 
-Over all look and feel came from the love sandwiches walk though, as this was only a data manipulation app i felt I didnt need to break too much from that layout. 
+Over all look and feel came from the love sandwiches walk though, as this was only a data manipulation app I felt I didnt need to break too much from that layout. 
