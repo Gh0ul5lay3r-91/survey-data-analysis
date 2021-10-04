@@ -53,6 +53,14 @@ The app will ask the user to input their option then check to see if its valid a
 ![Options List](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Options%20List.png)
 
 ### Average Age
+This feuture gets the column of ages from the sheet and then calculates the average age. It then displays this to the user.
 
-### Percentage of Male and Female
+![Average Age](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Option%201:Option%202.png)
+
+### Percentage of Males
+This feature takes the gender column in the survey and calculates the percentage of males
+
+![Percentage Male](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Option%201:Option%202.png)
+
+### Percentage of Females
 ### Average Salary
