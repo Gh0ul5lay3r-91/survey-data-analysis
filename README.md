@@ -58,9 +58,28 @@ This feuture gets the column of ages from the sheet and then calculates the aver
 ![Average Age](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Option%201:Option%202.png)
 
 ### Percentage of Males
-This feature takes the gender column in the survey and calculates the percentage of males
+This feature takes the gender column in the survey and calculates the percentage of males in the survey.
 
 ![Percentage Male](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Option%201:Option%202.png)
 
 ### Percentage of Females
+This feature is the exact same as the previous but just it calculates the percentage of females in the survey.
+
+![Percentage Female](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Option%203.png)
+
 ### Average Salary
+This feuture gets all the data from the salarys column and calculates the average salary and displays it to the user.
+
+![Average Salary](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/Option%204.png)
+
+## Testing
+As with my previous project, testing was done on a continuous basis, as I built the functions I used print statements to check the data being handled was correct. I then deployed the app as soon as it was in a workable state on Heroku. 
+
+### Bugs
+There where a few bugs in the code along the way, but these where dealt with as they where identified. At this time the only bugs that remain are the ability to handle letters, specials characters and whitespace when the user enters the option. I didnt have time to complete this. Also the program does not exit properly, again I didnt have time to implement this. 
+
+## Validating
+I used the PEP8 website to check the code. Initially there where many warnings in relation to indentation and whitespace, but I cleaned these up, re ran the code and it passed through successfully. 
+
+![PEP8](https://github.com/Gh0ul5lay3r-91/survey-data-analysis/blob/main/assets/readme%20images/PEP8.png)
+
