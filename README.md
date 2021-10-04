@@ -41,6 +41,13 @@ Flow charts where drawn up to aid with decision of how the app would function
 The Survey Data Analysis app has a few features to help the user both navigate the app, and be able to read the data coming from the survey.
 
 ### Options List
+The options list is provide to allow the user to select which way they would like the data presented to them.
+* Average Age
+* Percentage of Males
+* Percentage of Females
+* Average Salary
+The app will ask the user to input their option then check to see if its valid and matches the list of options.
+
 ### Average Age
 ### Percentage of Male and Female
 ### Average Salary
